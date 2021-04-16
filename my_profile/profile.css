@@ -98,7 +98,7 @@ body {
 }
 
 #profile-bg .profile-bg-img {
-    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(/my_profile/img/pen-glasses-open-notepad-my-laptop-calculator_112337-2292.jpg) fixed;
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(my_profile/img/pen-glasses-open-notepad-my-laptop-calculator_112337-2292.jpg) fixed;
     overflow: hidden;
     background-size: cover;
     height: 40vh;
