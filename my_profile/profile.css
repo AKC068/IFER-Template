@@ -98,7 +98,7 @@ body {
 }
 
 #profile-bg .profile-bg-img {
-    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(my_profile/img/pen-glasses-open-notepad-my-laptop-calculator_112337-2292.jpg) fixed;
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(/my_profile/img/pen-glasses-open-notepad-my-laptop-calculator_112337-2292.jpg) fixed;
     overflow: hidden;
     background-size: cover;
     height: 40vh;
@@ -132,10 +132,10 @@ body {
     background-color: #fff;
     position: relative;
     margin-top: 3rem;
-    margin-bottom: 2rem;
-    padding: 2rem 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
     border-radius: 0.25rem;
-    border: 1px solid rgba(0,0,0,.15);
+    border: 1px solid rgba(61, 8, 8, 0.15);
     border-radius: 0.35rem;
     /* box-shadow: 0 5px 40px rgb(0 0 0 / 15%); */
     font-family: Poppins, Helvetica, Arial, sans-serif;
@@ -148,4 +148,24 @@ body {
 #profile-info .info h5{
     font-size: 14px;
     font-weight: normal;
+}
+#profile-info .profile-edit {
+    position: relative;
+    text-decoration: none;
+    color: #ff2d54;
+    float: right;
+    top: -132px;
+    padding-top: 1rem;
+}
+#profile-info .profile-edit i {
+    color: #ff2d54;
+    border-radius: 50%;
+    padding: 8px;
+    border: 1px solid;
+}
+#profile-info .profile-edit i:hover {
+    background-color: #ff2d54;
+    color: #fff;
+    border: 1px solid #ff2d54;
+    transition: all 0.4s ease;
 }
