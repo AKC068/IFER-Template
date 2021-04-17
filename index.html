@@ -62,18 +62,130 @@
     <div id="profile-info">
         <div class="container-fluid design">
             <div class="container info">
-                <h6>Ayush068</h6>
-                <h4>Ayush Kumar Chaudhary</h4>
-                <h5>ayushkumac040@gmail.com</h5>
-                <h5>Patna, Bihar, India</h5>
-                <div class="profile-edit"><a href="#"><i class="fas fa-pen"></i></a></div>
+                <div id="details">
+                    <h6>Ayush068</h6>
+                    <h4>Ayush Kumar Chaudhary</h4>
+                    <!-- <h5>ayushkumac040@gmail.com</h5> -->
+                    <h5>Patna, Bihar, India</h5>
+                </div>
+                <div id="edit">
+                    <div class="profile-edit"><a href="#"><i class="fas fa-pen"></i></a></div>
+                </div>
             </div>
         </div>
     </div>
     <div id="profile-pic">
         <img src="my_profile/img/undraw_profile_pic_ic5t.png">
     </div>
+
+    <div id="sub-menu">
+        <!-- <div class="tab-header">
+            <div for="event" class="event active">Events</div>
+            <div for="membership" class="membership ">Membership</div>
+            <div for="setting" class="setting">Settings</div>
+        </div>
+        <div class="tab-content">
+            <div action="#" class="event tab-body active">
+                
+            </div>
+            <div action="#" class="membership tab-body ">
+                
+            </div>
+            <div action="#" class="setting tab-body">
+                <div class="form-row upper">
+                    <div class="form-group col-md-6 column">
+                      <input type="text" class="form-control" name="first-name" required>
+                      <label>First Name</label>
+                      <div class="underline"></div>
+                    </div>
+                    <div class="form-group col-md-6 column">
+                      <input type="text" class="form-control" name="last-name" required>
+                      <label>Last Name</label>
+                      <div class="underline"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group column">
+                        <input type="phone-number" class="form-control" name="phone-number" required>
+                        <label>Phone Number</label>
+                        <div class="underline extra"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group column">
+                        <input type="email" class="form-control" name="email" required>
+                        <label>Email</label>
+                        <div class="underline extra"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group column">
+                        <input type="password" class="form-control" name="password" required>
+                        <label>Password</label>
+                        <div class="underline extra"></div>
+                    </div>
+                </div>
+                <div class="btn-sm">
+                    <a href="user_portal.html"><button type="submit" class="sm-button">submit</button></a>
+                </div>
+                <div class="form-element down">
+                    <label class="login-link">Have an account? <a href="#" class="link">Sign In</a></label>
+                </div>
+            </div>
+          </div> -->
+        <div class="container-fluid design">
+            <div class="container info">
+                <div class="tab-header">
+                    <div class="active">Event</div>
+                    <div>Membership</div>
+                    <div>Settings</div>
+                  </div>
+                  <!-- <div class="tab-indicator"></div> -->
+                  <div class="tab-body">
+                    
+                        <div class="col-11 gapp active">
+                            <h2>This is Event section</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error neque saepe commodi blanditiis fugiat nisi aliquam ratione porro quibusdam in, eveniet accusantium cumque. Dolore officia reprehenderit perferendis quod libero omnis.</p>
+                          </div>
+                    
+                    
+                        <div class="col-11 gapp">
+                            <h2>This is Membership section</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error neque saepe commodi blanditiis fugiat nisi aliquam ratione porro quibusdam in, eveniet accusantium cumque. Dolore officia reprehenderit perferendis quod libero omnis.</p>
+                          </div>
+                   
+                    
+                        <div class="col-11 gapp">
+                            <h2>This is Settings section</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error neque saepe commodi blanditiis fugiat nisi aliquam ratione porro quibusdam in, eveniet accusantium cumque. Dolore officia reprehenderit perferendis quod libero omnis.</p>
+                          </div>
+                    
+                  </div>
+            </div> 
+        </div>     
+    </div>
+
+
+<!------ javascript ------>
+
+<script>
+let tabHeader = document.getElementsByClassName("tab-header")[0];
+// let tabIndicator = document.getElementsByClassName("tab-indicator")[0];
+let tabBody = document.getElementsByClassName("tab-body")[0];
+ 
+let tabsPane = tabHeader.getElementsByTagName("div");
+ 
+for(let i=0;i<tabsPane.length;i++){
+  tabsPane[i].addEventListener("click",function(){
+    tabHeader.getElementsByClassName("active")[0].classList.remove("active");
+    tabsPane[i].classList.add("active");
+    tabBody.getElementsByClassName("active")[0].classList.remove("active");
+    tabBody.getElementsByTagName("div")[i].classList.add("active");
     
+    // tabIndicator.style.left = `calc(calc(100% / 3) * ${i})`;
+  });
+}
+</script>
 
 
 <!------ jquery ------>

@@ -111,7 +111,7 @@ body {
     height: 100px;
     border: 2px solid #fff;
     border-radius: 50%;
-    position: absolute;
+    position:absolute;
     top:28%;
     left:10%;
     box-shadow: 0 0 20px 0 #666;
@@ -121,23 +121,20 @@ body {
     box-shadow: 0px -20px 30px -15px #666;
     border-top: 1px solid rgba(0,0,0,.15);
     border-radius: 15px 15px 0 0;
-    height: 40vh;
     /* background-color: rgb(230, 230, 230); */
     background-color: #fff;
     position: absolute;
     top: 38%;
 }
-
 #profile-info .info {
     background-color: #fff;
     position: relative;
     margin-top: 3rem;
     margin-bottom: 1rem;
     padding: 1rem;
-    border-radius: 0.25rem;
-    border: 1px solid rgba(61, 8, 8, 0.15);
+    border: 1px solid #ff2d54;
     border-radius: 0.35rem;
-    /* box-shadow: 0 5px 40px rgb(0 0 0 / 15%); */
+    box-shadow: 0 0px 30px 0px rgb(0 0 0 / 15%);
     font-family: Poppins, Helvetica, Arial, sans-serif;
 }
 #profile-info .info h6{
@@ -150,11 +147,12 @@ body {
     font-weight: normal;
 }
 #profile-info .profile-edit {
-    position: relative;
+    position: absolute;
     text-decoration: none;
     color: #ff2d54;
     float: right;
-    top: -132px;
+    bottom: 75px;
+    right: 17px;
     padding-top: 1rem;
 }
 #profile-info .profile-edit i {
@@ -169,3 +167,95 @@ body {
     border: 1px solid #ff2d54;
     transition: all 0.4s ease;
 }
+
+/* #sub-menu .tab-content > div.active {
+    display:block;
+}
+#sub-menu .tab-content > div {
+    display:none;
+} */
+
+#sub-menu .design {
+    /* background-color: rgb(230, 230, 230); */
+    background-color: #fff;
+    position: absolute;
+    top: 75%;
+}
+#sub-menu .info {
+    background-color: #fff;
+    position: relative;
+    /* margin-top: 2rem; */
+    margin-bottom: 2rem;
+    padding: 0;
+    /* border: 1px solid rgba(61, 8, 8, 0.15); */
+    border-radius: 0.35rem;
+    box-shadow: 0 0px 30px 0px rgb(0 0 0 / 15%);
+    font-family: Poppins, Helvetica, Arial, sans-serif;
+}
+
+#sub-menu .tab-header {
+    display:flex;
+    align-items:center;
+  }
+  #sub-menu .tab-header > div {
+    width:calc(100% / 3);
+    text-align:center;
+    color:#ff2d54;
+    font-weight:500;
+    cursor:pointer;
+    font-size:14px;
+    outline:none;
+  }
+  #sub-menu .tab-header > div {
+    display: block;
+    padding: 0.35rem;
+    border-bottom: 1px solid;
+  }
+  #sub-menu .tab-header > div.active {
+    color: #ff2d54;
+    /* box-shadow: 0 5px 50px rgb(0 0 0 / 15%); */
+    /* background-color: #000; */
+    border-radius: 0.35rem 0.35rem 0 0;
+    /* transition: all 0.5s ease-in-out; */
+    border-top: 1px solid #ff2d54;
+    border-right: 1px solid #ff2d54;
+    border-left: 1px solid #ff2d54;
+    border-bottom: 2px;
+  }
+  /* #sub-menu .tab-indicator {
+    position:relative;
+    width:calc(100% / 3);
+    height:5px;
+    background:#00acee;
+    left:0px;
+    border-radius:5px;
+    transition:all 500ms ease-in-out;
+  } */
+  #sub-menu .tab-body {
+    /* position: relative; */
+    /* height: calc(100% - 60px); */
+    padding: 10px 5px;
+    /* background-color: #000; */
+    color: #000;
+    border-bottom: 1px solid #ff2d54;
+    border-right: 1px solid #ff2d54;
+    border-left: 1px solid #ff2d54;
+    border-radius: 0 0 0.35rem 0.35rem;
+  }
+  #sub-menu .tab-body > div {
+    /* transition:opacity 500ms ease-in-out 0ms,transform 500ms ease-in-out 0ms; */
+    /*position: absolute; */
+    /* top: -200%; */
+    /* opacity: 0; */
+    display: none;
+    transform: scale(0.9);
+    transition: transform 500ms ease-in-out;
+  }
+  #sub-menu .tab-body > div.active {
+    display: block;
+    /* opacity: 1; */
+    transform: scale(1);
+  }
+  #sub-menu .tab-body .gapp{
+      margin: 1rem auto; 
+  }
