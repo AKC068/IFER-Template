@@ -428,14 +428,16 @@ body {
     background: #f2f2f2;
 }
 .content-design {
-    display: flex;
-    justify-content: center;
     width: 100%;
     min-height: 100vh;
     padding: 160px 30px 100px;
     overflow: hidden;
-    max-width: 800px;
     font-family: Poppins, Helvetica, Arial, sans-serif;
+}
+@media only screen and (min-width: 768px) {
+    .content-design {
+        max-width: 800px;
+    }
 }
 
 .content-design .forthis {
