@@ -156,11 +156,17 @@
             $('.alert').removeClass("show");
             $('.alert').addClass("hide");
           },5000);
+          setTimeout(function(){
+            $('.alert').removeClass("showAlert");
+          },7000);
         });
-        
+
         $('.close-btn').click(function(){
           $('.alert').removeClass("show");
           $('.alert').addClass("hide");
+          setTimeout(function(){
+            $('.alert').removeClass("showAlert");
+          },1500);
         });
 
     $(document).ready(function(){
@@ -217,7 +223,7 @@
                 }
             }
     });
-      </script>  
+    </script>  
 
 <!------- script ------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>

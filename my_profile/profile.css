@@ -429,7 +429,7 @@ body {
 }
 .content-design {
     width: 100%;
-    padding: 160px 30px 100px;
+    padding: 100px 30px;
     overflow: hidden;
     font-family: Poppins, Helvetica, Arial, sans-serif;
 }
@@ -468,10 +468,6 @@ body {
     border-bottom: 2px solid rgba(120, 120, 120, 0.5);
     border-radius: 0px;
     color: #fff;
-}
-
-.content-design .size {
-    height: 100px;
 }
 
 .content-design .form-group input:focus ~ label,
@@ -548,25 +544,25 @@ body {
     padding: 0.5rem 1rem;
     text-transform:uppercase;
     cursor: pointer;
-    background-color: #ff2d54;
-    color: #000;
+    background-color: #000;
+    color: #ff2d54;
     border: 2px solid #ff2d54;
     font-weight:500;
-    z-index: 100;
+    z-index: 999;
     transition: all 0.35s ease;
     width: 100%;
     border-radius: 0.25rem;
     outline: none;
     font-size: 14px;
 }
-@media only screen and (min-width: 576px){
+@media only screen and (min-width: 576px){ 
     .content-design .sm-button:hover {
-        background-color: #000;
-        color: #ff2d54;
+        background-color: #ff2d54;
+        color: #000;
         border: 2px solid #ff2d54;
-        font-weight: 500;
+        box-shadow: 0 0 20px rgba(255, 45, 83, 0.5), 0 0 30px rgba(255, 45, 83, 0.5), 0 0 40px rgba(255, 45, 83, 0.5);
     }
-}
+} 
 
 .content-design .tab-content {
     padding: 0 1rem;
