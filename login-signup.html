@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="my_profile/assets/fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="my_profile/assets/bootstrap-4.5.3/dist/css/bootstrap.min.css">
+
+    <title>IFER | Login/Signup Page</title>
+    <link href="my_profile/profile.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%7CPoppins%3A300%2Cregular%2C500%2C600%2C700%2C900&amp;subset" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Poppins:600%2C700%2C400%2C500" rel="stylesheet" property="stylesheet" type="text/css">
+</head>
+<body id="login-signup">
+    <div class="container content-design">
+        <div class="forthis">
+            <div class="tab-header">
+                <div for="login" class="login active">Sign In</div>
+                <div for="signup" class="signup">Sign Up</div>
+            </div>
+            <div class="tab-content">
+                <div action="#" class="login tab-body active">
+                    <form>
+                        <div class="form-row upper">
+                            <div class="form-group column">
+                                <input type="email" class="form-controling" name="email" id="email" required>
+                                <label>Email</label>
+                                <div class="underline extra"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group column">
+                                <input type="password" class="form-controling" name="password" required>
+                                <label>Password</label>
+                                <div class="underline extra"></div>
+                            </div>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" id="remember_me">
+                            <label for="remember_me">Remember me</label>
+                        </div>
+                        <div class="btn-sm">
+                            <a href="#"><button type="submit" class="sm-button">submit</button></a>
+                        </div>
+                        <div class="form-element down">
+                            <label><a href="#" class="link">Forgot Password ?</a></label><br>
+                            <label class="signup-link">Don't have an account? <a href="#" class="link">Sign Up</a></label>
+                        </div>
+                    </form>
+                </div>
+                <div action="#" class="signup tab-body">
+                    <form>
+                        <div class="form-row upper">
+                            <div class="form-group col-md-6 column">
+                              <input type="text" class="form-control" name="first-name" required>
+                              <label>First Name</label>
+                              <div class="underline"></div>
+                            </div>
+                            <div class="form-group col-md-6 column">
+                              <input type="text" class="form-control" name="last-name" required>
+                              <label>Last Name</label>
+                              <div class="underline"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group column">
+                                <input type="phone-number" class="form-control" name="phone-number" required>
+                                <label>Phone Number</label>
+                                <div class="underline extra"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group column">
+                                <input type="email" class="form-control" name="email" required>
+                                <label>Email</label>
+                                <div class="underline extra"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group column">
+                                <input type="password" class="form-control" name="password" required>
+                                <label>Password</label>
+                                <div class="underline extra"></div>
+                            </div>
+                        </div>
+                        <div class="btn-sm">
+                            <a href="#"><button type="submit" class="sm-button">submit</button></a>
+                        </div>
+                        <div class="form-element down">
+                            <label class="login-link">Have an account? <a href="#" class="link">Sign In</a></label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="alert hide">
+        <span class="fas fa-check-circle" id="success"></span>
+        <span class="fas fa-times-circle" id="error"></span>
+        <span class="fas fa-exclamation-circle" id="warning"></span>
+        <!-- <span class="msg">Warning: This is a warning alert!</span> -->
+        <span id="span1">You have logged in successfully!</span>
+        <span id="span2">Enter a Valid Email Address</span>
+	    <span id="span3">This field can't be Empty</span>
+        <div class="close-btn" id="cls1">
+          <span class="fas fa-times"></span>
+        </div>
+        <div class="close-btn" id="cls2">
+            <span class="fas fa-times"></span>
+        </div>
+        <div class="close-btn" id="cls3">
+            <span class="fas fa-times"></span>
+        </div>
+    </div>
+
+
+    <script>
+        let tabPanes = document.getElementsByClassName("tab-header")[0].getElementsByTagName("div");
+     
+     for(let i=0;i<tabPanes.length;i++){
+       tabPanes[i].addEventListener("click",function(){
+         document.getElementsByClassName("tab-header")[0].getElementsByClassName("active")[0].classList.remove("active");
+         tabPanes[i].classList.add("active");    
+         document.getElementsByClassName("tab-content")[0].getElementsByClassName("active")[0].classList.remove("active");
+         document.getElementsByClassName("tab-content")[0].getElementsByClassName("tab-body")[i].classList.add("active");
+       });
+     }
+      const loginBtn = document.querySelector("div.login");
+      const signupBtn = document.querySelector("div.signup");
+      const loginLink = document.querySelector(".login-link a");
+      const signupLink = document.querySelector(".signup-link a");
+      loginLink.onclick = (()=>{
+        loginBtn.click();
+        return false;
+      });
+      signupLink.onclick = (()=>{
+        signupBtn.click();
+        return false;
+      });
+
+    </script>
+<!------ jquery ------>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script>
+        $('button').click(function(){
+          $('.alert').addClass("show");
+          $('.alert').removeClass("hide");
+          $('.alert').addClass("showAlert");
+          setTimeout(function(){
+            $('.alert').removeClass("show");
+            $('.alert').addClass("hide");
+          },5000);
+        });
+        
+        $('.close-btn').click(function(){
+          $('.alert').removeClass("show");
+          $('.alert').addClass("hide");
+        });
+
+    $(document).ready(function(){
+        $('#email').focusout(function(){
+            email_validate();
+        });
+            function email_validate() {
+                var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                var email = $('#email').val();
+                if(email !== '') {
+                    if(pattern.test(email)) {
+                        // $('#lbl').css('color','green');
+                        // $('#email').css('border','2px solid green'); 
+                        $('#success').css('display','block');
+                        $('#error').css('display','none');
+                        $('#warning').css('display','none');
+                        $('#span1').css('display','block');
+                        $('#span2').css('display','none');
+                        $('#span3').css('display','none');
+                        $('#cls1').css('display','block');
+                        $('#cls2').css('display','none');
+                        $('#cls3').css('display','none');
+                        $('.alert').css('background','#98ffc1');
+                        $('.alert').css('border-left','8px solid #007E33');
+                    } else {
+                        // $('#lbl').css('color','red');
+                        // $('#email').css('border','2px solid red'); 
+                        $('#error').css('display','block');
+                        $('#success').css('display','none');
+                        $('#warning').css('display','none');
+                        $('#span2').css('display','block');
+                        $('#span1').css('display','none');
+                        $('#span3').css('display','none');
+                        $('#cls2').css('display','block');
+                        $('#cls1').css('display','none');
+                        $('#cls3').css('display','none');
+                        $('.alert').css('background','#ff9c9c');
+                        $('.alert').css('border-left','8px solid #CC0000');
+                    }         
+                } else {
+                    // $('#lbl').css('color','red');
+                    // $('#email').css('border','2px solid red');
+                    $('#warning').css('display','block'); 
+                    $('#error').css('display','none');
+                    $('#success').css('display','none');
+                    $('#span3').css('display','block');
+                    $('#span1').css('display','none');
+                    $('#span2').css('display','none');
+                    $('#cls3').css('display','block');
+                    $('#cls1').css('display','none');
+                    $('#cls2').css('display','none');
+                    $('.alert').css('background','#ffdb9b');
+                    $('.alert').css('border-left','8px solid #ffa502');
+                }
+            }
+    });
+      </script>  
+
+<!------- script ------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+    <script src="my_profile/assets/bootstrap-4.5.3/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
