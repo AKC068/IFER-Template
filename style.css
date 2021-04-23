@@ -221,7 +221,7 @@
 
 .card {
     max-width: 300px;
-    border-color: #ff2d54;
+    border: 1px solid #ff2d54;
     margin:auto;
     transform: scale(0.9);
     transition: transform 0.3s ease-in-out;
@@ -375,14 +375,14 @@
     color: #ff2d54;
     border-radius: 50%;
     padding: 5px;
-    border: 1px solid;
+    border: 1.5px solid;
     font-size: 12px;
     background-color: #fff;
 }
    .profile-edit i:hover {
     background-color: #ff2d54;
     color: #fff;
-    border: 1px solid #ff2d54;
+    border: 1.5px solid #ff2d54;
     transition: all 0.4s ease;
 }
     .details h6{
