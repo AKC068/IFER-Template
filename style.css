@@ -353,3 +353,50 @@
     outline: none;
   }
    .footer .btn {border-color:rgba(0, 0, 0, 0);}
+
+   .image img{
+    width:100px;
+    height: 100px;
+    border: 2px solid #ff2d54;
+    border-radius: 50%;
+   }
+
+   .profile-edit {
+    position: relative;
+    text-decoration: none;
+    color: #ff2d54;
+    float: right;
+    top: -15px;
+    left: -20px;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+   .profile-edit i {
+    color: #ff2d54;
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid;
+    font-size: 12px;
+    background-color: #fff;
+}
+   .profile-edit i:hover {
+    background-color: #ff2d54;
+    color: #fff;
+    border: 1px solid #ff2d54;
+    transition: all 0.4s ease;
+}
+    .details h6{
+     color: #ff2d54;
+     font-weight: normal;
+     line-height: 1.5;
+     padding: 15px 0;
+}
+    .details h4 {
+        font-size: 30px;
+        padding-bottom: 15px;
+    }
+    .details h5{
+    font-size: 16px;
+    font-weight: normal;
+    padding-bottom: 15px;
+}
