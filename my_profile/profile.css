@@ -330,7 +330,7 @@ body {
     border-bottom: none;
 }
 
-#sub-menu .btn-sm {
+#sub-menu .btn-sm { 
     padding-top: 1.5rem;
     padding-bottom: 2.5rem;
 }
@@ -621,6 +621,7 @@ body {
     color:#ff2d54;
 }
 
+/* <------------ Alert Box ------------> */
 
   .alert {
     padding: 20px 40px;
@@ -815,3 +816,27 @@ body {
         line-height: 30px;
     }
   }
+  
+/* <------------ validation css ------------> */
+
+#form .indicator {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+#form.valid .indicator {
+    color: #00ff00;
+    box-shadow: 0 0 10px #00ff00,
+                0 0 20px #00ff00,
+                0 0 30px #00ff00;
+}
+#form.invalid .indicator {
+    color: #ff0000;
+    box-shadow: 0 0 10px #ff0000,
+                0 0 20px #ff0000,
+                0 0 30px #ff0000;
+}

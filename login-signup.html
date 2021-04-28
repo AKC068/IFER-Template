@@ -23,13 +23,14 @@
                 </div>
                 <div class="tab-content">
                     <div action="#" class="login tab-body active">
-                        <form>
-                            <div class="form-row upper">
+                        <form id="form" action="#">
+                            <div class="form-row upper inputbox">
                                 <div class="form-group column">
-                                    <input type="email" class="form-controling" name="email" id="email" required>
+                                    <input type="email" class="form-controling" name="email" id="email" onkeydown="validation()" required>
                                     <label>Email</label>
+                                    <i id="emailvar" class="indicator fas"></i>
                                     <div class="underline extra"></div>
-                                </div>
+                                </div> 
                             </div>
                             <div class="form-row">
                                 <div class="form-group column">
@@ -119,6 +120,37 @@
     </div>
 
 
+    <!-- ====== onkeydown validation script ====== -->
+
+    <script>
+        function validation(){
+          const form = document.getElementById("form");
+          const email = document.getElementById("email").value;
+          const indicator = document.getElementById("emailvar");
+          const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+
+          if(email.match(pattern)) {
+            form.classList.add("valid");
+            form.classList.remove("invalid");
+            indicator.classList.add("fa-check-circle");
+            indicator.classList.remove("fa-times-circle");
+          }else {
+            form.classList.add("invalid");
+            form.classList.remove("valid");
+            indicator.classList.add("fa-times-circle");
+            indicator.classList.remove("fa-check-circle");
+          }
+          if(email == "") {
+            form.classList.remove("invalid");
+            form.classList.remove("valid");
+            indicator.classList.remove("fa-times-circle");
+            indicator.classList.remove("fa-check-circle");
+          }
+      }
+    </script>
+
+    <!-- ====== alert script ====== -->
+
     <script>
         let tabPanes = document.getElementsByClassName("tab-header")[0].getElementsByTagName("div");
      
@@ -147,7 +179,7 @@
 <!------ jquery ------>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
-    <script>
+    <!-- <script>
         $('button').click(function(){
           $('.alert').addClass("show");
           $('.alert').removeClass("hide");
@@ -223,9 +255,8 @@
                 }
             }
     });
-    </script>  
+    </script>   -->
 
-<!------- script ------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
     <script src="my_profile/assets/bootstrap-4.5.3/dist/js/bootstrap.min.js"></script>
 
