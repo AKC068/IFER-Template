@@ -840,3 +840,11 @@ body {
                 0 0 20px #ff0000,
                 0 0 30px #ff0000;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    background: rgba(0, 0, 0, 0) !important;
+    -webkit-background: rgba(0, 0, 0, 0) !important;
+}
