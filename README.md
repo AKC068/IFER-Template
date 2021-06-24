@@ -1,2 +1,2 @@
 # IFER-Template
-    Task assigned as an intern at Kohli.
+    This task was assigned as an intern at Kohli.
